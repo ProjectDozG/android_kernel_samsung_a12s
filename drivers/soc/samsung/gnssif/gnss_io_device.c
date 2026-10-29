@@ -600,8 +600,8 @@ static long misc_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
 
 	case GNSS_IOCTL_SET_WATCHDOG_RESET:
 		gif_info("%s: GNSS_IOCTL_SET_WATCHDOG_RESET\n", iod->name);
-		s3c2410wdt_set_emergency_reset(0,0);
-		return;
+		s3c2410wdt_set_emergency_reset(0, 0);
+		return 0;
 
 	case GNSS_IOCTL_READ_SHMEM_SIZE:
 		gif_info("%s: GNSS_IOCTL_READ_SHMEM_SIZE\n", iod->name);
