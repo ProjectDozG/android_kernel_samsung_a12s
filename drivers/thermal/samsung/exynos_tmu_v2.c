@@ -1617,6 +1617,7 @@ static int exynos_tmu_parse_ect(struct exynos_tmu_data *data)
 		pr_info("Trip count parsed from ECT : %d, zone : %s", function->num_of_range, tz->type);
 
 		for (i = 0; i < function->num_of_range; ++i) {
+			if (function->range_list[i].max_frequency == 1001000) function->range_list[i].max_frequency = 1196000;
 			temperature = function->range_list[i].lower_bound_temperature;
 			freq = function->range_list[i].max_frequency;
 			__tz->trips[i].temperature = temperature  * MCELSIUS;

@@ -2177,6 +2177,7 @@
 							regulator-min-microvolt = <0x186a00>;
 							regulator-max-microvolt = <0x1dc130>;
 							regulator-boot-on;
+							regulator-always-on;
 							regulator-ramp-delay = <0x2ee0>;
 							regulator-initial-mode = <0x03>;
 							phandle = <0x32>;
